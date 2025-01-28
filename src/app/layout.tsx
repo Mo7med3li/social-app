@@ -7,6 +7,7 @@ import theme from "./theme";
 import { Provider } from "react-redux";
 import { myStore } from "@/store/store";
 import ReduxProvider from "@/components/ReduxProvider/ReduxProvider";
+import Navbar from "@/components/Navbar/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +34,10 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
-            <ReduxProvider>{children}</ReduxProvider>
+            <ReduxProvider>
+              <Navbar />
+              {children}
+            </ReduxProvider>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

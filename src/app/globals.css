@@ -40,3 +40,10 @@ a {
     color-scheme: dark;
   }
 }
+.active {
+  background-color: #f1f1f1;
+  color: #36d;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 5px 12px;
+}
