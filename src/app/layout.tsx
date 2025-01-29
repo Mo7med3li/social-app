@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import { myStore } from "@/store/store";
 import ReduxProvider from "@/components/ReduxProvider/ReduxProvider";
 import Navbar from "@/components/Navbar/Navbar";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
             <ReduxProvider>
               <Navbar />
               {children}
+              <Toaster />
             </ReduxProvider>
           </ThemeProvider>
         </AppRouterCacheProvider>
